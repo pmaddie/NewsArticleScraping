@@ -1,0 +1,36 @@
+{
+  "name": "newsarticlescraping",
+  "version": "1.0.0",
+  "description": "scraping artticles to view and leave comments on",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmaddie/NewsArticleScraping.git"
+  },
+  "keywords": [
+    "news",
+    "articles",
+    "scraping",
+    "mongo",
+    "express",
+    "axios",
+    "cheerio"
+  ],
+  "author": "Madeline Prusak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmaddie/NewsArticleScraping/issues"
+  },
+  "homepage": "https://github.com/pmaddie/NewsArticleScraping#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.5.2"
+  }
+}
