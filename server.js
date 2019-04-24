@@ -28,16 +28,18 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-// Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/", { useNewUrlParser: true });
 
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI);
 
 //Routes
 //route code here
 
 // check connection status
-let db = mongoose.connection;
-db.on('error', (error)=>{
+let dB = mongoose.connection;
+dB.on('error', (error)=>{
     console.log(`Connection error ${error}`);
 });
 
